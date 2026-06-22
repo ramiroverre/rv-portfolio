@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --color-base: #09090b;
+  --color-elevated: #141417;
+  --color-ink: #f4f4f1;
+  --color-muted: #9a9aa3;
+  --color-accent: #0094ff;
+  --color-accent-soft: #0a2c47;
+  --color-coral: #ff5a36;
+  --color-line: rgba(244, 244, 241, 0.1);
+}
+
+@theme inline {
+  --color-base: var(--color-base);
+  --color-elevated: var(--color-elevated);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-accent: var(--color-accent);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-coral: var(--color-coral);
+  --color-line: var(--color-line);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-base);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #0a0a0a;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-base);
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2e;
+  border-radius: 8px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.text-display {
+  font-family: var(--font-display);
+}
