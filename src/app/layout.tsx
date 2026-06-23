@@ -25,6 +25,12 @@ export const metadata: Metadata = {
       "Diseño y desarrollo de sitios web a medida para restaurantes, estudios y marcas.",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "RV Studio — Diseño & Desarrollo Web Front-End",
+    description:
+      "Diseño y desarrollo de sitios web a medida para restaurantes, estudios y marcas.",
+  },
 };
 
 export default function RootLayout({
