@@ -11,29 +11,15 @@ export default function WhatsAppFloatingButton() {
   const [showBubble, setShowBubble] = useState(false);
 
   useEffect(() => {
-    const target = document.getElementById("proyectos");
-    if (!target) return;
-
-    let hasShown = false;
-    let hideTimeout: ReturnType<typeof setTimeout>;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasShown) {
-          hasShown = true;
-          setShowBubble(true);
-          hideTimeout = setTimeout(() => setShowBubble(false), 6000);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    observer.observe(target);
-    return () => {
-      observer.disconnect();
-      clearTimeout(hideTimeout);
-    };
+    const showTimeout = setTimeout(() => setShowBubble(true), 800);
+    return () => clearTimeout(showTimeout);
   }, []);
+
+  useEffect(() => {
+    if (!showBubble) return;
+    const hideTimeout = setTimeout(() => setShowBubble(false), 3000);
+    return () => clearTimeout(hideTimeout);
+  }, [showBubble]);
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">

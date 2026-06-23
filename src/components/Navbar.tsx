@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -13,6 +14,14 @@ const LINKS = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+
+  function handleLogoClick(event: React.MouseEvent) {
+    if (pathname === "/") {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -28,7 +37,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <Link href="/" className="shrink-0">
+        <Link href="/" onClick={handleLogoClick} className="shrink-0">
           <Image
             src="/brand/logo-light.png"
             alt="RV Studio"

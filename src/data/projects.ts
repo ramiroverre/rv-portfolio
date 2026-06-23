@@ -75,7 +75,7 @@ export const projects: Project[] = [
   },
   {
     slug: "cache-bistro",
-    name: "Cache Bistro",
+    name: "Caché Bistró",
     tagline: "Donde el vino encuentra su hogar",
     industry: "Gastronomía & Enoturismo",
     location: "Mendoza, Argentina",
@@ -90,13 +90,13 @@ export const projects: Project[] = [
     services: ["Branding digital", "Diseño UI/UX", "Desarrollo Front-End"],
     story: {
       idea:
-        "Cache Bistro guarda más de 700 etiquetas en su cava. Necesitaban un sitio que se sintiera igual de contundente que esa propuesta.",
+        "Caché Bistró guarda más de 700 etiquetas en su cava. Necesitaban un sitio que se sintiera igual de contundente que esa propuesta.",
       insight:
         "El cliente no quería 'otro sitio de restaurante elegante con foto de plato'. Buscaba algo con personalidad propia, que se destacara entre la oferta gastronómica de Mendoza y comunicara de entrada la escala real de su carta de vinos.",
       approach:
         "Aposté por tipografía condensada en mayúsculas, negro y crema como base, y rojo como acento de impacto. Las cifras de la cava se muestran como datos gigantes, casi como un titular, antes incluso de mostrar el menú: una forma directa de transmitir autoridad en pocos segundos.",
       result:
-        "Un sitio con una identidad muy reconocible, que comunica en los primeros segundos qué hace diferente a Cache Bistro de cualquier otro bistró de la zona.",
+        "Un sitio con una identidad muy reconocible, que comunica en los primeros segundos qué hace diferente a Caché Bistró de cualquier otro bistró de la zona.",
     },
   },
   {

@@ -18,9 +18,11 @@ export default function ProjectsSection() {
         </p>
       </div>
 
-      {projects.map((project, index) => (
-        <ProjectBand key={project.slug} project={project} index={index} />
-      ))}
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-6 pb-24 sm:grid-cols-2 md:gap-8">
+        {projects.map((project, index) => (
+          <ProjectBand key={project.slug} project={project} index={index} />
+        ))}
+      </div>
     </section>
   );
 }

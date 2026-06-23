@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { WebGLShader } from "@/components/ui/web-gl-shader";
 
 const SKILLS = [
   "DISEÑO UI/UX",
@@ -30,8 +29,16 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-28">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <WebGLShader />
-        <div className="absolute inset-0 bg-base/78" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+        >
+          <source src="/brand/video-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-base/70" />
         <div
           className="absolute inset-0"
           style={{
@@ -40,51 +47,52 @@ export default function Hero() {
         />
       </div>
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="mx-auto w-full max-w-6xl px-6"
-      >
-        <motion.span
-          variants={item}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-line px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted"
+      <div className="mx-auto w-full max-w-6xl px-6">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="w-full"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-          Diseño & desarrollo web front-end
-        </motion.span>
-
-        <motion.h1
-          variants={item}
-          className="font-display max-w-4xl text-[13vw] leading-[0.95] font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
-        >
-          Sitios web que
-          <br />
-          tus clientes <span className="text-accent">no van</span>
-          <br />a olvidar.
-        </motion.h1>
-
-        <motion.p variants={item} className="mt-8 max-w-xl text-lg text-muted">
-          Soy Ramiro, diseñador front-end. Convierto ideas de negocio en
-          landing pages rápidas, modernas y con animaciones que hacen que tu
-          marca se vea tan bien online como en la vida real.
-        </motion.p>
-
-        <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
-          <a
-            href="#proyectos"
-            className="rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-base transition-transform hover:scale-105"
+          <motion.span
+            variants={item}
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-line px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted"
           >
-            Ver proyectos
-          </a>
-          <a
-            href="#contacto"
-            className="rounded-full border border-line px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Diseño & desarrollo web front-end
+          </motion.span>
+
+          <motion.h1
+            variants={item}
+            className="font-display max-w-4xl text-[13vw] leading-[0.95] font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl"
           >
-            Hablemos de tu proyecto
-          </a>
+            Diseño web que
+            <br />
+            hace crecer
+            <br />tu <span className="text-accent">negocio</span>.
+          </motion.h1>
+
+          <motion.p variants={item} className="mt-8 max-w-xl text-lg text-muted">
+            Convierto ideas en landing pages rápidas, modernas y a la medida de tu
+            marca, pensadas para generar más consultas, reservas y ventas.
+          </motion.p>
+
+          <motion.div variants={item} className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="#proyectos"
+              className="rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-base transition-transform hover:scale-105"
+            >
+              Ver proyectos
+            </a>
+            <a
+              href="#contacto"
+              className="rounded-full border border-line px-7 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
+            >
+              Hablemos de tu proyecto
+            </a>
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0 }}

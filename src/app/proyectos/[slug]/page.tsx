@@ -171,10 +171,9 @@ export default async function ProjectPage({
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-base transition-transform hover:scale-105"
-              style={{ backgroundColor: project.accent }}
+              className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-base transition-transform hover:scale-105"
             >
-              Visitar sitio en vivo ↗
+              Visitar sitio en vivo →
             </a>
           </div>
         </section>

@@ -64,7 +64,7 @@ export default function ContactSection() {
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-3 rounded-full border border-line px-6 py-3.5 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
           >
-            Escribime por WhatsApp ↗
+            Escribime por WhatsApp →
           </a>
         </motion.div>
 

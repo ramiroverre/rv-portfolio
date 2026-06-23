@@ -14,95 +14,51 @@ export default function ProjectBand({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
-      className="relative isolate w-full overflow-hidden border-b border-line bg-base md:flex md:min-h-[640px] md:items-center"
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+      whileHover={{ y: -6 }}
+      className="group relative overflow-hidden rounded-3xl border border-line bg-elevated"
     >
-      {/* Mobile: image shown in full above the text, no overlay needed for legibility */}
-      <div className="relative aspect-[4/3] w-full md:hidden">
+      <div className="relative aspect-[4/3] w-full overflow-hidden">
         <Image
           src={project.cover}
           alt={`${project.name} — captura del sitio`}
           fill
-          sizes="100vw"
-          className="object-cover object-center"
-          priority={index === 0}
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover object-right transition-transform duration-500 group-hover:scale-105"
+          priority={index < 2}
         />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: "linear-gradient(to bottom, transparent 65%, var(--color-base) 100%)",
-          }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-t from-base via-base/30 to-transparent" />
       </div>
 
-      {/* Desktop: full-bleed background with left-to-right gradient behind the text */}
-      <div className="absolute inset-0 -z-10 hidden md:block">
-        <Image
-          src={project.cover}
-          alt={`${project.name} — captura del sitio`}
-          fill
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(9,9,11,0.96) 0%, rgba(9,9,11,0.88) 32%, rgba(9,9,11,0.35) 60%, rgba(9,9,11,0.25) 100%)",
-          }}
-        />
-      </div>
+      <div className="p-6 md:p-7">
+        <span className="font-display text-xs font-bold tracking-widest text-accent">
+          0{index + 1} — {project.industry}
+        </span>
 
-      <div className="mx-auto w-full max-w-6xl px-6">
-        <div className="max-w-md py-10 md:py-20">
-          <span
-            className="font-display text-sm font-bold tracking-widest"
-            style={{ color: project.accent }}
+        <h3 className="font-display mt-3 text-2xl font-bold leading-tight md:text-3xl">
+          {project.name}
+        </h3>
+
+        <p className="mt-2 text-sm text-muted">{project.tagline}</p>
+
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href={`/proyectos/${project.slug}`}
+            className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-base transition-transform hover:scale-105"
           >
-            0{index + 1} — {project.industry}
-          </span>
-
-          <h3 className="font-display mt-4 text-4xl font-bold leading-tight sm:text-5xl">
-            {project.name}
-          </h3>
-
-          <p className="mt-3 text-base text-muted">{project.tagline}</p>
-
-          <p className="mt-5 text-sm leading-relaxed text-ink/80">
-            {project.shortDescription}
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-2">
-            {project.services.map((service) => (
-              <span
-                key={service}
-                className="rounded-full border border-line px-3 py-1 text-xs text-muted"
-              >
-                {service}
-              </span>
-            ))}
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link
-              href={`/proyectos/${project.slug}`}
-              className="rounded-full px-6 py-3 text-sm font-semibold text-base transition-transform hover:scale-105"
-              style={{ backgroundColor: project.accent }}
-            >
-              Ver case study
-            </Link>
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-line px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-ink"
-            >
-              Visitar sitio ↗
-            </a>
-          </div>
+            Ver case study
+          </Link>
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-ink"
+          >
+            Visitar sitio →
+          </a>
         </div>
       </div>
     </motion.div>

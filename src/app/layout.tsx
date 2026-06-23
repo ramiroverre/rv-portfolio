@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 
-const display = Space_Grotesk({
+const display = Roboto({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
+  weight: ["500", "700", "900"],
 });
 
-const body = Inter({
+const body = Roboto({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
