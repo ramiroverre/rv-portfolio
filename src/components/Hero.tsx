@@ -34,6 +34,8 @@ export default function Hero() {
           loop
           muted
           playsInline
+          preload="auto"
+          poster="/brand/video-bg-poster.jpg"
           className="h-full w-full object-cover"
         >
           <source src="/brand/video-bg.mp4" type="video/mp4" />
