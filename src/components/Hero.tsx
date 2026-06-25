@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import FloatingLines from "@/components/ui/floating-lines";
 
 const SKILLS = [
   "DISEÑO UI/UX",
@@ -29,18 +30,19 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen flex-col justify-center overflow-hidden pt-28">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          poster="/brand/video-bg-poster.jpg"
-          className="h-full w-full object-cover"
-        >
-          <source src="/brand/video-bg.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-base/70" />
+        <div className="absolute inset-0 opacity-60">
+          <FloatingLines
+            linesGradient={["#15e08a", "#b4f23c"]}
+            enabledWaves={["top", "middle", "bottom"]}
+            lineCount={[8, 12, 16]}
+            lineDistance={[8, 6, 4]}
+            bendRadius={5.0}
+            bendStrength={-0.5}
+            interactive
+            parallax
+          />
+        </div>
+        <div className="absolute inset-0 bg-base/45" />
         <div
           className="absolute inset-0"
           style={{

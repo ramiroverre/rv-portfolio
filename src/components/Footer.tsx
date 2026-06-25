@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t border-line">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 sm:flex-row">
         <Image
-          src="/brand/logo-light.png"
+          src="/brand/logo-emerald.png"
           alt="RV Studio"
           width={137}
           height={36}

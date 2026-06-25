@@ -39,7 +39,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <Link href="/" onClick={handleLogoClick} className="shrink-0">
           <Image
-            src="/brand/logo-light.png"
+            src="/brand/logo-emerald.png"
             alt="RV Studio"
             width={137}
             height={36}

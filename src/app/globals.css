@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --color-base: #09090b;
-  --color-elevated: #141417;
-  --color-ink: #f4f4f1;
-  --color-muted: #9a9aa3;
-  --color-accent: #0094ff;
-  --color-accent-soft: #0a2c47;
+  --color-base: #0b0e0c;
+  --color-elevated: #131815;
+  --color-ink: #ecf2ee;
+  --color-muted: #7e8a82;
+  --color-accent: #15e08a;
+  --color-accent-soft: #0d2a1c;
   --color-coral: #ff5a36;
-  --color-line: rgba(244, 244, 241, 0.1);
+  --color-line: rgba(236, 242, 238, 0.1);
 }
 
 @theme inline {
