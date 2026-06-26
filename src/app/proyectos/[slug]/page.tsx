@@ -22,6 +22,15 @@ export async function generateMetadata({
   return {
     title: `${project.name} — RV Studio`,
     description: project.shortDescription,
+    alternates: {
+      canonical: `/proyectos/${slug}`,
+    },
+    openGraph: {
+      title: `${project.name} — RV Studio`,
+      description: project.shortDescription,
+      url: `/proyectos/${slug}`,
+      type: "article",
+    },
   };
 }
 

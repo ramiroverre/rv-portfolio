@@ -1,0 +1,17 @@
+# RV Studio
+
+> RV Studio es el portfolio de Ramiro, diseñador y desarrollador front-end especializado en landing pages a medida para restaurantes, estudios y marcas que quieren convertir visitas en clientes.
+
+RV Studio diseña y desarrolla sitios web de una sola página (landing pages), encargándose de todo el proceso: diseño UI/UX, desarrollo front-end, animaciones y puesta en producción.
+
+## Páginas
+
+- [Inicio](https://rv-portfolio-olive.vercel.app/): presentación, proyectos destacados, sobre Ramiro y contacto.
+- [23 Ríos](https://rv-portfolio-olive.vercel.app/proyectos/23-rios): landing para una cervecería artesanal en Luján de Cuyo, Mendoza.
+- [Arquitecto Ignacio Alonso](https://rv-portfolio-olive.vercel.app/proyectos/arq-alonso): sitio corporativo para un estudio de arquitectura y renders 3D.
+- [Caché Bistró](https://rv-portfolio-olive.vercel.app/proyectos/cache-bistro): sitio para un bistró con una gran cava de vinos en Mendoza.
+- [La Casona](https://rv-portfolio-olive.vercel.app/proyectos/la-casona): landing para un café de especialidad en una bodega histórica de Mendoza.
+
+## Contacto
+
+Para cotizar un proyecto: WhatsApp +54 9 261 250-5160, o el formulario de contacto en la página de inicio.
